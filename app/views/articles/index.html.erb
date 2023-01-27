@@ -1,5 +1,4 @@
 <h1>Articles listing page</h1>
-
 <table>
   <thead>
     <tr>
@@ -8,15 +7,14 @@
       <th>Actions</th>
     </tr>
   </thead>
-
   <tbody>
-  <% @articles.each do |article| %>
-    <tr>
-      <td><%= article.title %></td>
-      <td><%= article.description %></td>
-      <td>Actions</td>
-    </tr>
+    <% @articles.each do |article| %>
+      <tr>
+        <td><%= article.title %></td>
+        <td><%= article.description %></td>
+        <td><%= link_to 'Show', article_path(article) =%></td>
+        <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %></td>
+      </tr>
     <% end %>
   </tbody>
-
-</table>
+</table
