@@ -4,7 +4,7 @@
     <tr>
       <th>Title</th>
       <th>Description</th>
-      <th>Actions</th>
+      <th colspan="3">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -13,8 +13,11 @@
         <td><%= article.title %></td>
         <td><%= article.description %></td>
         <td><%= link_to 'Show', article_path(article) =%></td>
+        <td><%= link_to 'Edit', edit_article_path(article) =%></td>
         <td><%= link_to 'Delete', article_path(article), data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
-</table
+</table>
+<%= link_to 'Create new article', new_article_path, data: { "turbo-method": :new, turbo_confirm: 'Are you sure?' } %>
+<%= link_to 'Home', root_path %>
