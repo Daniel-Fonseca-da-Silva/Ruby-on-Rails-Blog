@@ -1,3 +1,31 @@
+// NavBar style
+#home-container {
+  padding-top: 25px;
+}
+
 .navbar {
   background-color: #333 !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+// Body Style
+body {
+  background: #ddd; 
+}
+
+// Footer style
+.footer-text {
+  color: #ccc !important;
 }
