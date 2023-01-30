@@ -6,16 +6,21 @@
     <% end %>
   </ul>
 <% end %>
-<%= form_with(model: @article, local: true) do |f| %>
-  <p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </p>
-  <p>
-    <%= f.label :descrition %><br>
-    <%= f.text_area :description %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
+<div class="container">
+  <%= form_with(model: @article, local: true) do |f| %>
+    <div class="card">
+      <div class="card-body">
+        <div class="input-group mb-3">
+          <%= f.label :title, class: "input-group-text" %>
+          <%= f.text_field :title, class: "form-control" %>
+        </div>
+        <div class="input-group">
+          <%= f.label :description, class: "input-group-text" %>
+          <%= f.text_area :description, class: "form-control" %>
+        </div>
+        <%= f.submit class: "btn btn-success" %>
+        <%= link_to "back".html_safe, articles_path, :class=>"btn btn-danger" %>
+      </div>
+    </div>
+  </div>
 <% end %>
