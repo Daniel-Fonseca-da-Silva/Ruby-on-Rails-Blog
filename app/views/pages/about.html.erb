@@ -1,2 +1,35 @@
-<h1>My about page</h1>
-<%= link_to 'Home', root_path %>
+<%= render 'articles/navigation' %>
+<div class="container about-container">
+  <div class="bg-light p-5 rounded-lg m-3">
+    <h1 class="display-4 text-center title-about">ROB BLOG</h1>
+    <p class="lead">Identify user needs: Start by understanding the problems that users face and the solutions they need. This will help you create software that is relevant and useful.
+      Conduct user research: Gather feedback from potential users through surveys, focus groups, or beta testing. This information will help you make informed design decisions and improve your software.
+      Create a prototype: Build a working model of your software that includes its key features and functionalities. This allows you to test your ideas and make changes early in the development process.
+      Design with the user in mind: Focus on creating an intuitive and user-friendly interface that is easy to navigate and understand.
+      Test and iterate: Regularly test your software and gather feedback from users. Use this feedback to make improvements and fix any issues that arise.
+      Stay up-to-date: Stay informed about the latest trends and advancements in software development to ensure that your software remains competitive.
+      .</p>
+    <hr class="my-4">
+    <p>By following these steps, you can create software that is well-designed, user-friendly, and effective in solving real-world problems.
+    </p>
+    <a class="btn btn-primary btn-lg" href="https://www.linkedin.com/in/daniel-f-s-developer/
+"role="button">Know my others projects</a>
+  </div>
+</div>
+<div class="container">
+  <div class="card">
+    <div class="card-body text-center">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <%= link_to root_path do %>
+              <i class="fa-solid fa-xmark icon-system"></i>
+              Close
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= render 'articles/footer' %>

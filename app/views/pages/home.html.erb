@@ -1,14 +1,16 @@
 <%= render 'articles/navigation' %>
 <div class="container" id="home-container">
   <div class="card text-center">
-    <div class="card-header">
+    <div class="card-header title-home">
       Your location now
     </div>
     <div class="card-body">
     </div>
     <div class="card-footer text-muted">
-      <%= link_to 'Show articles', articles_path %>
-      <%= link_to 'About', about_path %>
+      <%= link_to about_path do %>
+        <i class="fa-solid fa-question icon-system"></i>
+        About
+      <% end %>
     </div>
   </div>
 </div>
