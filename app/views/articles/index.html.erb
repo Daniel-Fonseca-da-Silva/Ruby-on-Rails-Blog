@@ -6,15 +6,10 @@
       <div class="container text-center">
         <div class="row">
           <div class="col">
-            <%= link_to new_article_path do %>
-              <i class="fa-solid fa-plus icon-system"></i>Create
-            <% end %>
+            <%= link_to "Create".html_safe, new_article_path, :class=>"btn btn-primary" %>
           </div>
           <div class="col">
-            <%= link_to root_path do %>
-              <i class="fa-solid fa-xmark icon-system"></i>
-              Close
-            <% end %>
+            <%= link_to "Back".html_safe, root_path, :class=>"btn btn-danger" %>
           </div>
         </div>
       </div>

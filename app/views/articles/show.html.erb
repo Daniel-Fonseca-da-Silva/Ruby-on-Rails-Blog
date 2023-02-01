@@ -1,6 +1,18 @@
-<h1>Showing the articles</h1>
-<p><strong>Title: </strong><%= @article.title %></p>
-<p><strong>Description: </strong><%= @article.description %></p>
-<%= link_to 'Edit article', edit_article_path %>
-<%= link_to 'Delete article', article_path, data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
-<%= link_to 'Back to articles', articles_path %>
+<%= render 'navigation' %>
+<div class="card-header title-home text-center">
+  Showing Your Articles
+</div>
+<div class="container">
+  <div class="card">
+    <div class="card-body text-center">
+      <p><strong>Title: </strong><%= @article.title %></p>
+      <p><strong>Description: </strong><%= simple_format(@article.description) %></p>
+      <p><strong>Created: </strong><%= time_ago_in_words(@article.created_at) %></p>
+      <p><strong>Edited: </strong><%= time_ago_in_words(@article.updated_at) %></p>
+      <%= link_to "Back".html_safe, articles_path, :class=>"btn btn-primary" %>
+      <%= link_to "Edit".html_safe, edit_article_path, :class=>"btn btn-info" %>
+      <%= link_to "Delete".html_safe, article_path, :class=>"btn btn-danger", data: { "turbo-method": :delete, turbo_confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+</div>
+<%= render 'footer' %>
